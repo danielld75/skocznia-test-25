@@ -58,5 +58,11 @@ describe('calculateDistancePoints', () => {
       assert.equal(actual, expected);
     });
 
+    it('should return message if wrote wrong kind of ski-jump', () => {
+      const actual = calculateDistancePoints(83,'normale',98);
+      const expected = "You write wrong kind of ski jump. Only: 'normal', 'big' or 'mammoth'";
+      assert.equal(actual, expected);
+    });
+
   });
 });

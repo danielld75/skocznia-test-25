@@ -1,11 +1,7 @@
 const calculateDistancePoints = (distance, hillSize, kPoint) => {
 
-  let pointDifference = function(kPoint, distance, basePoint){
-    if (distance >= kPoint) {
+  const pointDifference = function(kPoint, distance, basePoint){
       return (distance - kPoint) * basePoint;
-    } else if (distance < kPoint) {
-      return (distance - kPoint) * basePoint;
-    }
   };
 
   switch (hillSize) {
@@ -16,7 +12,7 @@ const calculateDistancePoints = (distance, hillSize, kPoint) => {
     case 'mammoth':
       return 120 + pointDifference(kPoint, distance, 1.2);
     default:
-      break;
+      return "You write wrong kind of ski jump. Only: 'normal', 'big' or 'mammoth'";
   }
 };
 

@@ -8,7 +8,7 @@ const calculateStylePoints = (styleNotes) => {
   let notesMax = notes.indexOf(Math.max(notes));
   notes.splice(notesMax,1);
 
-  return (Math.sum(notes));
+  return Math.sum(notes);
 };
 
 module.exports = calculateStylePoints;
